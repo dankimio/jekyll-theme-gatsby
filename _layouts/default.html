@@ -1,1 +1,11 @@
-{{ content }}
+<!DOCTYPE html>
+<html lang="en">
+  {% include head.html %}
+  <body>
+    <div class="global-wrapper" data-is-root-path="{% if page.layout == 'home' %}true{% endif %}">
+      {{ content }}
+
+      {% include footer.html %}
+    </div>
+  </body>
+</html>

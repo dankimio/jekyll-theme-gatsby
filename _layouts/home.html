@@ -1,35 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-  {% include head.html %}
-  <body>
-    <div class="global-wrapper" data-is-root-path="{% if page.layout == 'home' %}true{% endif %}">
-      {% include header.html %}
+<main>
+  {% include bio.html %}
 
-      <main>
-        {% include bio.html %}
-
-        <ol style="list-style: none;">
-          {% for post in site.posts %}
-          <li>
-            <article class="post-list-item" itemscope itemtype="http://schema.org/Article">
-              <header>
-                <h2>
-                  <a itemprop="url" href="{{site.baseurl}}{{post.url}}">
-                    {{post.title}}
-                  </a>
-                </h2>
-                <small>{{post.date|date_to_string}}</small>
-              </header>
-              <section>
-                <p itemprop="description">{{post.content|truncate: 120}}</p>
-              </section>
-            </article>
-          </li>
-          {% endfor %}
-        </ol>
-      </main>
-
-      {% include footer.html %}
-    </div>
-  </body>
-</html>
+  <ol style="list-style: none;">
+    {% for post in site.posts %}
+    <li>
+      <article class="post-list-item" itemscope itemtype="http://schema.org/Article">
+        <header>
+          <h2>
+            <a itemprop="url" href="{{site.baseurl}}{{post.url}}">
+              {{post.title}}
+            </a>
+          </h2>
+          <small>{{post.date|date_to_string}}</small>
+        </header>
+        <section>
+          <p itemprop="description">{{post.content|truncate: 120}}</p>
+        </section>
+      </article>
+    </li>
+    {% endfor %}
+  </ol>
+</main>
