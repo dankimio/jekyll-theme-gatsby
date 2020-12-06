@@ -1,0 +1,20 @@
+<header class="global-header">
+  <a class="header-link-home" href="{{site.baseurl}}/">{{site.title}}</a>
+</header>
+
+<main>
+  <article class="blog-post" itemscope>
+    <header>
+      <h1 itemprop="headline">
+        {{page.title}}
+      </h1>
+    </header>
+    <section itemprop="articleBody">
+      {{content}}
+    </section>
+    <hr>
+    <footer>
+      {% include bio.html %}
+    </footer>
+  </article>
+</main>
