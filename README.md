@@ -1,5 +1,7 @@
 # jekyll-theme-gatsby
 
+![Screenshot](screenshot.png)
+
 Jekyll port of [gatsby-starter-blog](https://github.com/gatsbyjs/gatsby-starter-blog)'s theme.
 
 
