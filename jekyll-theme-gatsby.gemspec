@@ -18,5 +18,6 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency "jekyll-seo-tag", "~> 2.6"
   spec.add_runtime_dependency "jekyll-sitemap", "~> 1.4"
 
+  spec.add_development_dependency "rake"
   spec.add_development_dependency "webrick"
 end
